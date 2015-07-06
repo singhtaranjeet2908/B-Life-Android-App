@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nyu.blife_app.HelplineNumbersScreen"
+    android:background="#de99ac">
+    <TextView
+        android:id="@+id/helpline_number_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="HELPLINE NUMBERS"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center_horizontal"
+        android:background="#34495e"
+        android:textColor="#ffffffff"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/helpline_number_textview"
+
+    android:layout_above="@+id/textView989"   />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="# Source:psych central"
+        android:id="@+id/textView989"
+        android:gravity="center_horizontal"
+        android:background="#34495e"
+        android:textColor="#ffffffff"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

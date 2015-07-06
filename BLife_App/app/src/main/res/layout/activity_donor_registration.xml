@@ -1,0 +1,230 @@
+<ScrollView
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nyu.blife_app.DonorRegistrationActivity"
+    android:background="#de99ac">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/title_activity_donor_registration"
+        android:id="@+id/txtDonorRegistration"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:background="#34495e"
+        android:padding="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/txtDonorRegistration">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDOB"
+            android:gravity="bottom|left"
+            android:text="@string/register_donor_DOB"
+            android:padding="10dp"
+            style="@style/Widget.AppCompat.Spinner"
+            android:onClick="showDatePickerDialog"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerDonorBloodGroup"
+            android:gravity="left"
+            android:layout_below="@+id/txtDOB"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_marginTop="10dp"
+            android:layout_alignStart="@+id/txtDOB"
+            android:layout_alignEnd="@+id/txtDOB"
+            android:entries="@array/Blood_Group"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/register_donor_gender"
+            android:id="@+id/txtGender"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="left"
+            android:padding="10dp"
+            android:layout_below="@+id/spinnerDisease"
+            android:layout_marginTop="10dp"
+            android:layout_alignStart="@+id/txtDOB" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroupGender"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_donor_chk_male"
+                android:id="@+id/radioMale"
+                android:gravity="center_vertical|left"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_donor_chk_female"
+
+                android:id="@+id/radioFemale"
+                android:layout_marginLeft="46dp"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:textColorHint="#34495e"
+            app:met_errorColor="#34495e"
+            app:met_baseColor="#34495e"
+            app:met_primaryColor="#FFD41022"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:padding="16dp"
+            android:inputType="number"
+            android:id="@+id/editWeight"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom|left"
+            android:hint="@string/register_donor_weight"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/register_donor_disease"
+            android:id="@+id/txtDisease"
+            android:layout_below="@+id/editWeight"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_marginTop="10dp"
+            android:layout_alignStart="@+id/txtDOB"
+            android:layout_alignParentRight="false"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="left"
+            android:padding="10dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroupDisease"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_donor_chk_yes"
+                android:id="@+id/radioDiseaseYes"
+                android:gravity="center_vertical|left"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_donor_chk_no"
+                android:id="@+id/radioDiseaseNo"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/register_donor_pregnant"
+            android:id="@+id/txtPregnant"
+            android:gravity="left"
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_below="@+id/txtGender"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_marginTop="10dp"
+            android:layout_alignStart="@+id/txtDOB"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroupPregnant"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_donor_chk_yes"
+                android:id="@+id/radioPregnantYes"
+                android:gravity="center_vertical|left"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_donor_chk_no"
+                android:id="@+id/radioPregnantNo"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_Button"
+            android:id="@+id/registerButton_Donor"
+            android:textColor="#ffffffff"
+            style="@style/ButtonText"
+            android:background="@drawable/button_style"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center|center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="25dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" />
+    </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>
+
+

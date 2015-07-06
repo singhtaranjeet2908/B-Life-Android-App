@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="OptYesNo">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="Blood_Group" >
+        <item> BLOOD GROUP </item>
+        <item>A-</item>
+        <item>A+</item>
+        <item>A1-</item>
+        <item>A1+</item>
+        <item>A1B-</item>
+        <item>A1B+</item>
+        <item>A2-</item>
+        <item>A2+</item>
+        <item>A2B-</item>
+        <item>A2B+</item>
+        <item>AB-</item>
+        <item>AB+</item>
+        <item>B-</item>
+        <item>B+</item>
+        <item>O-</item>
+        <item>O+</item>
+
+    </string-array>
+
+    <string-array name="Cities">
+        <item> CITY </item>
+        <item>New York City</item>
+        <item>San Fransisco</item>
+        <item>San Diego</item>
+        <item>San Jose</item>
+        <item>Chicago</item>
+        <item>Pittsburgh</item>
+        <item>Boston</item>
+        <item>Houston</item>
+        <item>Seattle</item>
+        <item>Dallas</item>
+        <item>Atlanta</item>
+        <item>Jersey City</item>
+        <item>Ohio</item>
+        <item>Washington D.C.</item>
+        <item>Phoenix</item>
+    </string-array>
+
+</resources>

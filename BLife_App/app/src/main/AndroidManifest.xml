@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nyu.blife_app" >
+
+    <uses-sdk
+        android:maxSdkVersion="22"
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <!-- Permissions for setting up Parse's "Push notifications" -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="com.nyu.blife_app.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.nyu.blife_app.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.CALL_DIAL" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <action android:name="android.location.PROVIDERS_CHANGED" />
+
+    <receiver android:name=".GpsLocationReceiver" >
+        <intent-filter>
+            <action android:name="android.location.PROVIDERS_CHANGED" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </receiver>
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme" >
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".SearchDonorsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".DonorsListScreenActivity"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".SendBloodRequestActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ViewBloodRequestActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ManageRequestsScreen"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SearchHospitalsScreen"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SearchBloodBankActivity"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".HelplineNumbersScreen"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".FAQsScreen"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".RegistrationActivity"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".DonorRegistrationActivity"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".RegistrationAuthenticationActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home" >
+
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".HealthTipsActivity"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".AboutBLifeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SelectedHospitalDetails"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".RequestVerificationActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".ManageRequestsScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nyu.blife_app.ManageRequestsScreen" />
+        </activity>
+
+        <!-- code for setting up Parse "Push notifications" -->
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--customized Broadcast Receiver for push notifications that extends the ParsePushBroadcastReceiver-->
+        <receiver
+            android:name="com.nyu.blife_app.receivers.NotificationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <category android:name="com.nyu.blife_app" />
+            </intent-filter>
+        </receiver>
+
+        <!-- replace @drawable/push_icon with your push icon identifier -->
+        <meta-data
+            android:name="com.parse.push.notification_icon"
+            android:resource="@drawable/app_logo" />
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDVWwLxRu5FIgvcBmdAeO4U4yfh0M2Tobs" />
+
+        <activity
+            android:name=".SearchResultVBRActvity"
+            android:label="@string/app_name"
+            android:parentActivityName=".ViewBloodRequestActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nyu.blife_app.ViewBloodRequestActivity" />
+        </activity>
+        <activity
+            android:name=".SingleItemView"
+            android:label="@string/app_name"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Search_Hotel"
+            android:label="@string/app_name" >
+
+        </activity>
+
+
+    </application>
+
+</manifest>

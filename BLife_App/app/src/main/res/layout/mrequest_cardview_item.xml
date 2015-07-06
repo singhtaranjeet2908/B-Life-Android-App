@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="3dp"
+    card_view:cardCornerRadius="5dp"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/card"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackground="@android:color/black">
+    -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:padding="10dp"
+        android:background="@drawable/border_recycler"
+        >
+        <TextView
+            android:id="@+id/reqname"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            />
+
+
+        <TextView
+            android:id="@+id/reqsender"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/reqname"
+            android:layout_marginTop="1dp"
+            android:text="Name"
+            android:layout_marginLeft="1dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/reqname"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:id="@+id/reqCity"
+            android:gravity="center"
+            android:text="City"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:padding="2dp"
+            android:layout_below="@+id/reqsender"
+            android:layout_alignLeft="@+id/reqsender"
+            android:layout_alignStart="@+id/reqsender" />
+        <TextView
+            android:id="@+id/reqLoc"
+            android:gravity="center"
+            android:text="Location"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:padding="2dp"
+            android:layout_below="@+id/reqCity"
+            android:layout_alignLeft="@+id/reqCity"
+            android:layout_alignStart="@+id/reqCity" />
+        <TextView
+            android:id="@+id/reqDate"
+            android:gravity="center"
+            android:text="Required Before"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:padding="2dp"
+            android:layout_below="@+id/reqLoc"
+            android:layout_alignLeft="@+id/reqLoc"
+            android:layout_alignStart="@+id/reqLoc" />
+        <TextView
+            android:id="@+id/reqContact"
+            android:gravity="center"
+            android:text="Contact Info"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:padding="2dp"
+            android:layout_below="@+id/reqDate"
+            android:layout_alignLeft="@+id/reqDate"
+            android:layout_alignStart="@+id/reqDate" />
+        <TextView
+            android:id="@+id/reqStatus"
+            android:gravity="center"
+            android:text="Request Status"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:padding="2dp"
+            android:layout_below="@+id/reqContact"
+            android:layout_alignLeft="@+id/reqContact"
+            android:layout_alignStart="@+id/reqContact" />
+
+
+
+        <TextView
+            android:id="@+id/textViewCity"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@+id/reqCity"
+            android:layout_alignLeft="@+id/textViewName"
+            android:layout_alignStart="@+id/textViewName" />
+
+        <TextView
+            android:id="@+id/textViewLoc"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@+id/reqDate"
+            android:layout_alignLeft="@+id/textViewCity"
+            android:layout_alignStart="@+id/textViewCity" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@+id/reqDate"
+            android:layout_alignLeft="@+id/textViewLoc"
+            android:layout_alignStart="@+id/textViewLoc" />
+
+        <TextView
+            android:id="@+id/textViewphone"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Phone"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@+id/reqContact"
+            android:layout_alignLeft="@+id/textViewDate"
+            android:layout_alignStart="@+id/textViewDate" />
+
+        <TextView
+            android:id="@+id/textViewstatus"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Awaiting confirmation"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignTop="@+id/reqStatus"
+            android:layout_alignLeft="@+id/textViewphone"
+            android:layout_alignStart="@+id/textViewphone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/lnrlayoutmr"
+            android:layout_below="@+id/textViewstatus"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp">
+
+    <Button
+        android:id="@+id/btnDeleteReq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Delete Request"
+        android:textSize="15sp"
+        android:gravity="center|center_horizontal"
+        android:textColor="#ffffffff"
+        style="@style/ButtonText"
+        android:background="@drawable/button_style"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/reqStatus"
+        android:layout_centerHorizontal="true" />
+        </LinearLayout>
+
+</RelativeLayout>
+<!--
+</android.support.v7.widget.CardView>
+-->

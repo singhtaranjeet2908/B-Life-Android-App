@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nyu.blife_app.RegistrationActivity">
+    <item android:id="@+id/signInButton" android:title="@string/signIn"
+        app:showAsAction="never" android:textColor="#34495e"/>
+
+</menu>

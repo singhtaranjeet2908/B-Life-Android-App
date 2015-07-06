@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="com.nyu.blife_app.HomeActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="1" />
+    <item android:id="@+id/signUpButton" android:title="@string/reg_as_donor"
+        android:orderInCategory="2"
+         android:textColor="#34495e"/>
+    <item android:id="@+id/log_out" android:title="@string/log_out"
+        android:orderInCategory="3"
+         android:textColor="#34495e"/>
+
+</menu>

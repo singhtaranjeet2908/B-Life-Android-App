@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nyu.blife_app.SearchHospitalsScreen"
+    android:background="#de99ac">
+
+    <TextView
+        android:id="@+id/search_hospitals_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="HOSPITALS AROUND YOU"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center_horizontal"
+        android:background="#34495e"
+        android:textColor="#ffffffff"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"/>
+
+
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_hospitals_lview"
+        android:layout_below="@+id/search_hospitals_textview"
+        android:layout_margin="2dp"
+        android:padding="3dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

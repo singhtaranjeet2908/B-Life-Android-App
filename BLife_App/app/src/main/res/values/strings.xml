@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">B-LIFE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">SETTINGS</string>
+    <string name="log_out">SIGN OUT</string>
+    <string name="reg_as_donor">REGISTER AS A DONOR</string>
+    <!-- Strings defined for Welcome Screen -->
+
+    <string name="welcome_caption">BE A LIFE SAVER</string>
+    <string name="welcome_subCaption">DONATE BLOOD</string>
+    <string name="welcome_appName">B-LIFE</string>
+    <string name="img_content_desc">Welcome Image</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="signIn">SIGN IN</string>
+   <string name="Enter_your_credentials"> ENTER YOUR CREDENTIALS</string>
+    <!-- Strings defined for Registration Screen -->
+    <string name="title_activity_registration">REGISTRATION</string>
+    <string name="register_username_hint">USER NAME</string>
+    <string name="register_password_hint">PASSWORD</string>
+    <string name="register_phone_hint">PHONE NUMBER</string>
+    <string name="register_firstname_hint">FIRST NAME</string>
+    <string name="register_lastname_hint">LAST NAME</string>
+    <string name="select_city">CITY</string>
+    <string name="register_zipcode_hint">ZIP CODE (xxxxx)</string>
+    <string name="register_donor_checkbox">REGISTER AS A DONOR?</string>
+    <string name="register_Button">REGISTER</string>
+    <string name="push_text">Turn on or off to receive push notifications</string>
+
+    <!-- Strings defined for Donor Registration Screen -->
+    <string name="title_activity_donor_registration">DONOR REGISTRATION</string>
+    <string name="register_donor_DOB">DATE OF BIRTH</string>
+    <string name="register_donor_weight">WEIGHT (lbs)</string>
+    <string name="register_donor_disease">DO YOU HAVE HEART OR LUNG DISEASE?</string>
+    <string name="register_donor_gender">GENDER</string>
+    <string name="register_donor_chk_male">MALE</string>
+    <string name="register_donor_chk_female">FEMALE</string>
+    <string name="register_donor_chk_yes">YES</string>
+    <string name="register_donor_chk_no">NO</string>
+    <string name="register_donor_pregnant">ARE YOU PREGNANT?</string>
+    <string name="profile">EDIT PROFILE</string>
+
+    <!-- Strings defined for Home Screen -->
+    <string name="title_activity_home">B-LIFE</string>
+    <string name="list_group_title">Group Title</string>
+    <string name="list_group_image">Group Image</string>
+
+
+    <string name="title_activity_search_donors">SearchDonorsActivity</string>
+    <string name="title_activity_donors_list">DonorsListActivity</string>
+    <string name="title_activity_send_blood_request">SendBloodRequestActivity</string>
+    <string name="title_activity_view_blood_request">ViewBloodRequestActivity</string>
+    <string name="title_activity_blood_required">BloodRequiredActivity</string>
+
+
+
+    <string name="title_activity_registration_authentication">REGISTRATION AUTHENTICATION</string>
+    <string name="title_activity_login">ENTER LOGIN DETAILS</string>
+
+    <string name="title_activity_donors_list_screen">DonorsListScreenActivity</string>
+    <string name="title_activity_manage_requests_screen">ManageRequestsScreen</string>
+    <string name="title_activity_search_hospitals_screen">SearchHospitalsScreen</string>
+    <string name="title_activity_search_blood_bank_screen">SearchBloodBankScreen</string>
+    <string name="title_activity_helpline_numbers_screen">HelplineNumbersScreen</string>
+    <string name="title_activity_faqs_screen">FAQsScreen</string>
+
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_intro">fill all details</string>
+    <string name="error_blank_username">fill username</string>
+    <string name="error_blank_password">enter password</string>
+    <string name="error_end">xx</string>
+    <string name="error_join">yy</string>
+    <string name="progress_login">loading please wait</string>
+
+    <style name="ButtonText">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_edit_notification_settings">EditNotificationSettings</string>
+    <string name="title_activity_edit_profile_settings">EditProfileSettings</string>
+    <string name="title_activity_edit_profile">EditProfileActivity</string>
+    <string name="title_activity_edit_notification">EditNotificationActivity</string>
+    <string name="title_activity_health_tips">HealthTipsActivity</string>
+    <string name="title_activity_about_blife">AboutBLifeActivity</string>
+    <string name="consumer_key">JHJK4fmTb0QKaUGjuNiX9A</string>
+    <string name="consumer_secret">9dw5LpBjtlhB-cMXHA2uYsWkgTI</string>
+    <string name="token">VKDcN9l-VQrleLLOD5duvrMD7CTfbtAY</string>
+    <string name="token_secret">R3nsLGb8L5DOpTB3b9tEELxQ90k</string>
+
+    <string name="title_activity_selected_hospital_details">SelectedHospitalDetails</string>
+
+    <string name="title_activity_request_verification">RequestVerificationActivity</string>
+    <string name="title_activity_search_result_vbractvity">SearchResultVBRActvity</string>
+    <string name="title_activity_single_item_view">SingleItemView</string>
+    <string name="title_activity_search__hotel">Search_Hotel</string>
+
+
+
+</resources>

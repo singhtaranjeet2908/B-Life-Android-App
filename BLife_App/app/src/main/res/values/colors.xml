@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name = "home_activity_header">#7f8c8d</color>
+    <color name="opaque_red">#f00</color>
+    <color name = "home_activity_button">#34495e</color>
+    <color name = "list_group_highlighter_color">#D32F2F</color>
+
+
+    <!--For Floating Action button-->
+    <color name="primary">#D32F2F</color>
+    <color name="ripple">#34495e</color>
+    <color name="accent_pressed">#3f51b5</color>
+    <color name = "list_item_highlighter_color">#D32F2F</color>
+</resources>

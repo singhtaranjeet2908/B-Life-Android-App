@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="3dp"
+    card_view:cardCornerRadius="5dp"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/card1"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackground="@android:color/black">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/vbrdetails"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            />
+
+
+        <TextView
+            android:id="@+id/vbr_sender"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/vbrdetails"
+            android:layout_marginTop="1dp"
+            android:text="Name"
+            android:layout_marginLeft="1dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp" />
+
+        <TextView
+            android:id="@+id/textViewNamevbr"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/vbrdetails"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:id="@+id/vbr_City"
+            android:gravity="center"
+            android:text="City"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:padding="2dp"
+            android:layout_below="@+id/vbr_sender"
+            android:layout_alignLeft="@+id/vbr_sender"
+            android:layout_alignStart="@+id/vbr_sender" />
+        <TextView
+            android:id="@+id/vbr_loc"
+            android:gravity="center"
+            android:text="Location"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:padding="2dp"
+            android:layout_below="@+id/vbr_City"
+            android:layout_alignLeft="@+id/vbr_City"
+            android:layout_alignStart="@+id/vbr_City" />
+        <TextView
+            android:id="@+id/vbr_date"
+            android:gravity="center"
+            android:text="Required Before"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:padding="2dp"
+            android:layout_below="@+id/vbr_loc"
+            android:layout_alignLeft="@+id/vbr_loc"
+            android:layout_alignStart="@+id/vbr_loc" />
+        <TextView
+            android:id="@+id/vbr_contact"
+            android:gravity="center"
+            android:text="Contact Info"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:padding="2dp"
+            android:layout_below="@+id/vbr_date"
+            android:layout_alignLeft="@+id/vbr_date"
+            android:layout_alignStart="@+id/vbr_date" />
+
+        <TextView
+            android:id="@+id/textViewCityvbr"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="City"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@+id/vbr_City"
+            android:layout_alignLeft="@+id/textViewNamevbr"
+            android:layout_alignStart="@+id/textViewNamevbr" />
+
+        <TextView
+            android:id="@+id/textViewLocvbr"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Location"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@+id/vbr_date"
+            android:layout_alignLeft="@+id/textViewCityvbr"
+            android:layout_alignStart="@+id/textViewCityvbr" />
+
+        <TextView
+            android:id="@+id/textViewDatevbr"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Date"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@+id/vbr_date"
+            android:layout_alignLeft="@+id/textViewLocvbr"
+            android:layout_alignStart="@+id/textViewLocvbr" />
+
+        <TextView
+            android:id="@+id/textViewphonevbr"
+            android:gravity="center"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="9179606377"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@+id/vbr_contact"
+            android:layout_alignLeft="@+id/textViewDatevbr"
+            android:layout_alignStart="@+id/textViewDatevbr" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/lnrlayoutmr"
+            android:layout_below="@+id/vbr_contact"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnContactreqSender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Contact Request Sender"
+                android:textSize="15sp"
+                android:gravity="center|center_horizontal"
+                android:textColor="#ffffffff"
+                style="@style/ButtonText"
+                android:background="@drawable/button_style"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
